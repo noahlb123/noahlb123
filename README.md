@@ -1,13 +1,12 @@
-Handlebars.js: "Minimal templating"
+Handlebars.js: "Your code will be so simple!"
 
-Also Handlebars.js:
+Handlebars.js Reality:
 
 ```html
-{{#each ReactionContext}}
-{{#each this.LocalizedCompoundSpec}}
-{{~this.Diffusion~}}
-[{{../../../this.Model.[0].ModelUnitSystem.[0].$.AreaUnit~}}
-/{{../../../this.Model.[0].ModelUnitSystem.[0].$.TimeUnit}}]
-{{~/each~}}
-{{~/each~}}
+{{#each value.Reactant}}
+{{nullCheck this.$.LocalizedCompoundRef}}
+{{#if (greater ../this.Reactant.length (add 1 @index))}}
++
+{{/if}}
+{{/each}}
 ```
